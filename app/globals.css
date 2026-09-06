@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Lato:wght@300;400;700&display=swap');
+
+@layer base {
+  :root {
+    --novo-teal: #74a4ac;
+    --novo-dark: #212121;
+    --novo-slate: #666666;
+    --novo-border: #dee4e5;
+    --novo-black: #000000;
+    --novo-white: #ffffff;
+    --novo-light-bg: #f7f9fa;
+  }
+
+  html {
+    font-family: 'Lexend', Arial, sans-serif;
+    color: var(--novo-dark);
+    background-color: var(--novo-white);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--novo-white);
+    color: var(--novo-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Editorial Serif headings */
+  .font-serif-editorial {
+    font-family: 'Spectral', Georgia, serif;
+  }
+
+  .font-sans-technical {
+    font-family: 'Lexend', Arial, sans-serif;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #74a4ac;
+    outline-offset: 3px;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Institutional Print Stylesheet */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #212121 !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  header,
+  footer,
+  nav,
+  .no-print,
+  button,
+  .print-hidden {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 80%;
+    color: #666666;
+  }
+
+  .print-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-header {
+    display: block !important;
+    border-bottom: 2px solid #74a4ac;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+  }
+}

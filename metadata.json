@@ -1,0 +1,6 @@
+{
+  "name": "Novo Enviro",
+  "description": "Institutional climate finance consultancy developing high-integrity carbon reduction and removal projects, and internationally certified plastic credit solutions. Offices in Sofia, Bulgaria and Istanbul, Türkiye.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
